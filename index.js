@@ -24,7 +24,7 @@ mongoose.Promise = global.Promise
    try {
        Customer.create(customer)
         .then(customer => {
-         console.info('New Customer Added');
+         console.info('Customer baru ditambah');
          mongoose.connection.close()
        });
 
@@ -41,7 +41,7 @@ const findCustomer = (name) => {
     Customer.find({$or: [{firstName: search}, {lastName: search}]})
       .then(customer => {
         console.info(customer);
-        console.info(`${customer.length} matches`);
+        console.info(`${customer.length} sama`);
         mongoose.connection.close()
       });
   }
@@ -51,7 +51,7 @@ const updateCustomer = async (_id, customer) => {
   try {
       Customer.updateOne({_id}, customer)
       .then(customer => {
-        console.info('Customer Updated');
+        console.info('Customer di Update');
         mongoose.connection.close()
       });
 

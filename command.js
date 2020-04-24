@@ -80,7 +80,7 @@ const pertanyaan = [
 
 //List Customer
         program
-        .command('List')
+        .command('list')
         .alias('l')
         .description('List Customers')
         .action(() => listCustomer())
