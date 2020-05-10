@@ -54,7 +54,7 @@ const pertanyaan = [
     program
         .command('add')
         .alias('a')
-        .description('Tambahkan Customer')
+        .description('Tambahkan Pelanggan')
         .action(() => {
             prompt(pertanyaan)
                 .then(jawaban => addCustomer(jawaban))
@@ -65,7 +65,7 @@ const pertanyaan = [
         program
         .command('update <_id>')
         .alias('u')
-        .description('Update a Customer')
+        .description('Update Pelanggan')
         .action((_id) => {
             prompt(pertanyaan)
                 .then(jawaban => updateCustomer(_id,jawaban))
@@ -75,21 +75,21 @@ const pertanyaan = [
         program
         .command('remove <_id>')
         .alias('r')
-        .description('Remove A customer')
+        .description('Hapus Pelanggan')
         .action(_id => removeCustomer(_id) )
 
 //List Customer
         program
         .command('list')
         .alias('l')
-        .description('List Customers')
+        .description('Daftar Pelanggan')
         .action(() => listCustomer())
 
 
     program
     .command('find <name>')
     .alias('f')
-    .description('Find a customer')
+    .description('Cari Pelanggan')
     .action(name => findCustomer(name));
 
 
